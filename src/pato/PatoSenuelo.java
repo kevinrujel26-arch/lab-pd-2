@@ -2,7 +2,7 @@
 package pato;
 
 public class PatoSenuelo extends Pato {
-    public Patosenuelo(){
+    public PatoSenuelo(){
        volable = new NoVuela(); 
        cuaqueable = new CuaqueoMudo();
        
