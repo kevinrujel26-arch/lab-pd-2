@@ -1,17 +1,12 @@
 public class TiempoApp {
     public static void main(String[] args) {
 
-        MonitorTiempo lcdmonitor =
-                new MonitorTiempo(new PantallaLCD(), 20.0f);
+        MonitorTiempo monitor = new MonitorTiempo();
 
-        MonitorTiempo ventanadecomputador =
-                new MonitorTiempo(new VentanaDeComputador(), 20.0f);
+        monitor.agregarObserver(new PantallaLCD());
+        monitor.agregarObserver(new VentanaDeComputador());
+        monitor.agregarObserver(new PantallaDeRelojInteligente());
 
-        MonitorTiempo pantallarelojinteligente =
-                new MonitorTiempo(new PantallaDeRelojInteligente(), 20.0f);
-
-        lcdmonitor.mostrarEnPantalla();
-        ventanadecomputador.mostrarEnPantalla();
-        pantallarelojinteligente.mostrarEnPantalla();
+        monitor.setTemperatura(20);
     }
 }
