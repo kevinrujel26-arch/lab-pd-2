@@ -1,6 +1,6 @@
-public class VentanaDeComputador implements Pantalla{
+public class VentanaDeComputador implements Observer {
     @Override
-    public void mostrarEnPantalla(float numero){
-        System.out.println("La temperatura en la venta es : " +numero);
+    public void actualizar(float temperatura){
+        System.out.println("La temperatura en la ventana es : " +temperatura);
     }
 }

@@ -1,6 +1,6 @@
-public class PantallaDeRelojInteligente implements Pantalla{
+public class PantallaDeRelojInteligente implements Observer {
     @Override
-    public void mostrarEnPantalla(float numero){
-        System.out.println("La temperatura en la pantalla de Reloj Inteligente es : " +numero);
+    public void actualizar(float temperatura){
+        System.out.println("La temperatura en la pantalla de Reloj Inteligente es : " +temperatura);
     }
 }
